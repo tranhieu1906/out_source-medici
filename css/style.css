@@ -252,7 +252,8 @@
     padding: 33px;
     position: relative;
     margin-top: 200px;
-    margin-right: 40px; }
+    margin-right: 20px;
+    margin-left: 20px; }
     .our-team .box-container .box .avatar {
       border-radius: 50%;
       position: absolute;
@@ -260,7 +261,8 @@
       transform: translate(-50%, -50%);
       top: 0%;
       left: 50%;
-      border: 8px solid white; }
+      border: 8px solid #ffffff;
+      background-color: #f2f4f8; }
     .our-team .box-container .box .name {
       color: #101f40;
       font-weight: 600;
@@ -268,5 +270,83 @@
       text-align: center;
       margin-top: 180px; }
     .our-team .box-container .box .info--details {
-      color: #101F40;
+      color: #101f40;
       font-size: 16px; }
+
+.object-interest {
+  background-color: #3267d9;
+  padding: 120px 136px;
+  color: #ffffff;
+  text-align: center; }
+  .object-interest .title {
+    font-weight: 300;
+    font-size: 32px;
+    margin-bottom: 0; }
+  .object-interest .sub-title {
+    font-size: 48px;
+    font-weight: 700; }
+  .object-interest button {
+    font-weight: 600;
+    color: #12398d !important;
+    font-size: 24px;
+    padding: 17px 51px;
+    background: #f8faff !important;
+    border-radius: 15px;
+    margin-top: 50px; }
+  .object-interest .content {
+    margin-top: 50px; }
+    .object-interest .content .item--round {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 30px; }
+      .object-interest .content .item--round .box__round {
+        width: 98px;
+        height: 98px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 600;
+        font-size: 48px;
+        border-radius: 50%;
+        margin-left: 35px;
+        margin-right: 35px; }
+        .object-interest .content .item--round .box__round--violet {
+          background-color: #9245fe; }
+        .object-interest .content .item--round .box__round--orange {
+          background-color: #faa634; }
+        .object-interest .content .item--round .box__round--green {
+          background-color: #12b89e; }
+    .object-interest .content .item__container {
+      display: flex;
+      gap: 10px;
+      justify-content: space-between; }
+      .object-interest .content .item__container .item .name {
+        font-weight: 600;
+        font-size: 24px; }
+      .object-interest .content .item__container .item .value {
+        font-size: 16px; }
+
+.general-box {
+  padding: 120px 79px; }
+  .general-box .title {
+    color: #12398d;
+    font-weight: 600;
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 50px; }
+
+.more__info {
+  background-color: #fbfbfb; }
+
+.frequently-questions {
+  background-color: #EAF2FF; }
+
+.accordion .accordion-item .accordion-header .accordion-button {
+  background: #ffffff;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.07) !important;
+  border-radius: 10px !important; }
+
+.accordion .accordion-item .accordion-collapse {
+  padding: 1rem 1.25rem;
+  background: #FFFFFF !important; }
