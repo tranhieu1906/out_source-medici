@@ -1,4 +1,128 @@
 /*This file is for your custom css.  All yours*/
+$background-color: #1c3548;
+$size-s: 12px;
+$size-m: 14px;
+$size-m2: 16px;
+$size-l: 18px;
+$size-xl: 25px;
+$breakpoints: (
+    xxs: 320px,
+    xs: 576px,
+    sm: 768px,
+    md: 992px,
+    lg: 1200px,
+    xl: 1536px
+);
+
+@mixin xxl {
+	@media (min-width: 1600px) {
+		@content;
+	}
+}
+
+@mixin pc {
+	@media (min-width: 1025px) {
+		@content
+	}
+}
+
+@mixin laptop {
+	@media (max-width: 1024px) {
+		@content;
+	}
+}
+
+@mixin tablet {
+	@media (max-width: 768px) {
+		@content;
+	}
+}
+
+@mixin mobile {
+	@media(max-width: 575px){
+		@content;
+	}
+}
+
+@mixin media-breakpoint-above($breakpoint) {
+	@if map-has-key($breakpoints, $breakpoint) {
+		$breakpoint-value: map-get($breakpoints, $breakpoint);
+		@media only screen and (min-width: ($breakpoint-value + 1)) {
+			@content;
+		}
+	} @else {
+		@media only screen and (min-width: ($breakpoint + 1)) {
+			@content;
+		}
+	}
+}
+
+/**
+    * Usage
+    * @include media-breakpoint-below(sm) or @media-breakpoint-below(768px)
+*/
+
+@mixin media-breakpoint-below($breakpoint) {
+	@if map-has-key($breakpoints, $breakpoint) {
+		$breakpoint-value: map-get($breakpoints, $breakpoint);
+		@media only screen and (max-width: $breakpoint-value) {
+			@content;
+		}
+	} @else {
+		@media only screen and (max-width: $breakpoint) {
+			@content;
+		}
+	}
+}
+
+/**
+    * Usage
+    * @include media-breakpoint-between(sm, lg) or @media-breakpoint-between(768px, 1200px)
+*/
+
+@mixin media-breakpoint-between($lower, $upper) {
+	@if map-has-key($breakpoints, $lower) and map-has-key($breakpoints, $upper)
+	{
+		$lower-breakpoint: map-get($breakpoints, $lower);
+		$upper-breakpoint: map-get($breakpoints, $upper);
+
+		@media only screen and (min-width: $lower-breakpoint) and (max-width: ($upper-breakpoint - 1)) {
+			@content;
+		}
+	} @else {
+		@media only screen and (min-width: $lower) and (max-width: ($upper - 1)) {
+			@content;
+		}
+	}
+}
+
+@mixin up-to-size($key, $breakpoint: $breakpoints) {
+	@media (max-width: map-get($breakpoint, $key)) {
+		@content;
+	}
+}
+
+
+
+@mixin custom-scroll() {
+	&::-webkit-scrollbar-track
+	{
+		border-radius: 10px;
+		background-color: transparent;
+	}
+
+	&::-webkit-scrollbar
+	{
+		width: 5px;
+		background-color: transparent;
+	}
+
+	&::-webkit-scrollbar-thumb
+	{
+		border-radius: 10px;
+		background-color: var(--gray4);
+	}
+}
 .container-fluid {
   padding-left: 0 !important;
   padding-right: 0 !important;
@@ -16,6 +140,10 @@
   //     display: flex;
   //     justify-content: space-between;
   //   }
+  @include mobile {
+    padding: 70px 20px;
+    padding-bottom: 120px;
+  }
   .logo {
     width: 264px;
     height: 97px;
@@ -32,10 +160,19 @@
       .value {
         margin-bottom: -5px;
       }
+      @include tablet {
+        font-size: 24px;
+        p {
+          display: inline;
+        }
+      }
     }
     .sub--title {
       color: #12398d;
       font-size: 28px;
+      @include tablet {
+        font-size: 16px;
+      }
     }
     button {
       background: #3267d9;
@@ -47,6 +184,10 @@
       font-weight: 600;
       font-size: 32px;
       margin-top: 54px;
+      @include tablet {
+        padding: 16px 51px;
+        font-size: 16px;
+      }
     }
   }
 }
@@ -55,10 +196,16 @@
   flex-direction: column;
   align-items: center;
   margin-top: -70px;
+  @include media-breakpoint-below(1368px) {
+		margin-top: 0px;
+	}
   .title {
     color: #12398d;
     font-size: 36px;
     font-weight: 600;
+    @include tablet {
+      font-size: 24px;
+    }
   }
 
   .countdown {
@@ -74,14 +221,27 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      margin-right: 20px;
+      margin-right: 10px;
+      margin-left: 10px;
+      @include tablet {
+        width: 75px;
+        height: 75px;
+      }
     }
     &--value {
       font-size: 48px;
       margin-bottom: -10px;
+      @include tablet {
+        font-size: 24px;
+        margin-bottom: 1px;
+      }
     }
     &--name {
       font-size: 20px;
+      @include tablet {
+        font-size: 16px;
+        margin-bottom: 0;
+      }
     }
   }
 }
@@ -90,6 +250,9 @@
   background-color: #3267d9;
   display: flex;
   flex-wrap: wrap;
+  @include tablet {
+    padding: 70px 20px;
+  }
   .post__container {
     box-shadow: 0px 64px 60px -40px rgba(15, 15, 15, 0.05);
     border-radius: 30px;
@@ -111,9 +274,15 @@
       .title {
         font-weight: 600;
         font-size: 24px;
+        @include mobile {
+          font-size: 20px;
+        }
       }
       .content {
         font-size: 16px;
+        @include mobile {
+          font-size: 14px;
+        }
       }
     }
   }
@@ -123,14 +292,23 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    @include tablet {
+      padding-left: 0px;
+    }
     // width: 50%;
     .title {
       font-size: 28px;
       margin-bottom: 0;
+      @include mobile {
+        font-size: 14px;
+      }
     }
     .sub--title {
       font-size: 48px;
       font-weight: 600;
+      @include mobile {
+        font-size: 24px;
+      }
     }
     .content {
       width: 100%;
@@ -146,6 +324,10 @@
         font-weight: 600;
         font-size: 24px;
         margin-bottom: 32px;
+        @include mobile() {
+          font-size: 16px;
+          margin-bottom: 24px;
+        }
       }
       button {
         background-color: #faa634;
@@ -153,15 +335,25 @@
         font-size: 24px;
         padding: 26px 66px;
         border-radius: 8px !important;
+        @include mobile() {
+          padding: 17px 27px;
+          font-size: 16px;
+        }
       }
       &--bottom {
         text-align: center;
       }
       .countdown__container {
         margin-top: 75px;
+        @include mobile() {
+          margin-top: 36px;
+        }
         .title {
           margin-bottom: 30px;
           color: #ffffff;
+          @include mobile() {
+            font-size: 24px;
+          }
         }
       }
     }
@@ -418,9 +610,22 @@
 }
 .more__info {
   background-color: #fbfbfb;
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
 }
 .frequently-questions {
   background-color: #EAF2FF;
+  .btn-register {
+    font-weight: 600;
+    color: #FFFFFF !important;
+    font-size: 24px;
+    padding: 15px 30px;
+    background: #3267D9 !important;
+    border-radius: 10px;
+    margin-top: 40px;
+  }
 }
 .accordion {
   .accordion-item {
@@ -428,13 +633,66 @@
       .accordion-button {
         background: #ffffff;
         box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.07) !important;
-        border-radius: 10px !important;
       }
     }
       .accordion-collapse {
         padding: 1rem 1.25rem;
         background: #FFFFFF !important;
-        box-shadow: 0px 0px 40px rgb(0 0 0 / 7%) !important;
     }
+  }
+}
+.color--green {
+  color: #12b89e !important;
+}
+.companies {
+  text-align: center;
+}
+.footer {
+  padding: 68px 80px;
+  gap: 20px;
+  background-color: #3267D9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .item {
+    color: #FFFFFF;
+    font-size: 16px;
+    .name {
+      margin-bottom: 3px;
+      font-weight: 600;
+    }
+    img {
+      margin-bottom: 10px;
+    }
+  }
+}
+.modal-dialog {
+  .modal-header {
+    padding-top: 20px;
+    padding-bottom: 60px !important;
+    position: relative;
+    .modal-title {
+      padding-top: 44px;
+      position: absolute;
+      font-size: 32px;
+      font-weight: 600;
+      width: 100%;
+      text-align: center;
+    }
+  }
+  .modal-content {
+    border-radius: 30px;
+  }
+  label {
+    font-size: 16px;
+    margin-bottom: 2px !important;
+    color: #101F40;
+  }
+  .btn-register {
+    font-size: 24px;
+    font-weight: 500;
+    padding: 10px 70px;
+    margin-top: 20px;
+    border-radius: 8px;
   }
 }

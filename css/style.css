@@ -1,4 +1,12 @@
 /*This file is for your custom css.  All yours*/
+/**
+    * Usage
+    * @include media-breakpoint-below(sm) or @media-breakpoint-below(768px)
+*/
+/**
+    * Usage
+    * @include media-breakpoint-between(sm, lg) or @media-breakpoint-between(768px, 1200px)
+*/
 .container-fluid {
   padding-left: 0 !important;
   padding-right: 0 !important; }
@@ -11,6 +19,10 @@
   background-repeat: no-repeat;
   background-size: cover;
   padding: 40px 119px 119px 98px; }
+  @media (max-width: 575px) {
+    .banner {
+      padding: 70px 20px;
+      padding-bottom: 120px; } }
   .banner .logo {
     width: 264px;
     height: 97px;
@@ -25,9 +37,17 @@
       margin-bottom: 16px; }
       .banner__content .title .value {
         margin-bottom: -5px; }
+      @media (max-width: 768px) {
+        .banner__content .title {
+          font-size: 24px; }
+          .banner__content .title p {
+            display: inline; } }
     .banner__content .sub--title {
       color: #12398d;
       font-size: 28px; }
+      @media (max-width: 768px) {
+        .banner__content .sub--title {
+          font-size: 16px; } }
     .banner__content button {
       background: #3267d9;
       /* Large */
@@ -37,16 +57,26 @@
       font-weight: 600;
       font-size: 32px;
       margin-top: 54px; }
+      @media (max-width: 768px) {
+        .banner__content button {
+          padding: 16px 51px;
+          font-size: 16px; } }
 
 .countdown__container {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: -70px; }
+  @media only screen and (max-width: 1368px) {
+    .countdown__container {
+      margin-top: 0px; } }
   .countdown__container .title {
     color: #12398d;
     font-size: 36px;
     font-weight: 600; }
+    @media (max-width: 768px) {
+      .countdown__container .title {
+        font-size: 24px; } }
   .countdown__container .countdown {
     display: flex;
     color: #ffffff;
@@ -60,18 +90,34 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      margin-right: 20px; }
+      margin-right: 10px;
+      margin-left: 10px; }
+      @media (max-width: 768px) {
+        .countdown__container .countdown__box {
+          width: 75px;
+          height: 75px; } }
     .countdown__container .countdown--value {
       font-size: 48px;
       margin-bottom: -10px; }
+      @media (max-width: 768px) {
+        .countdown__container .countdown--value {
+          font-size: 24px;
+          margin-bottom: 1px; } }
     .countdown__container .countdown--name {
       font-size: 20px; }
+      @media (max-width: 768px) {
+        .countdown__container .countdown--name {
+          font-size: 16px;
+          margin-bottom: 0; } }
 
 .register__container {
   padding: 120px 80px;
   background-color: #3267d9;
   display: flex;
   flex-wrap: wrap; }
+  @media (max-width: 768px) {
+    .register__container {
+      padding: 70px 20px; } }
   .register__container .post__container {
     box-shadow: 0px 64px 60px -40px rgba(15, 15, 15, 0.05);
     border-radius: 30px;
@@ -90,20 +136,35 @@
       .register__container .post__container .post--item .title {
         font-weight: 600;
         font-size: 24px; }
+        @media (max-width: 575px) {
+          .register__container .post__container .post--item .title {
+            font-size: 20px; } }
       .register__container .post__container .post--item .content {
         font-size: 16px; }
+        @media (max-width: 575px) {
+          .register__container .post__container .post--item .content {
+            font-size: 14px; } }
   .register__container .register__form {
     color: #ffffff !important;
     padding-left: 30px;
     display: flex;
     flex-direction: column;
     align-items: center; }
+    @media (max-width: 768px) {
+      .register__container .register__form {
+        padding-left: 0px; } }
     .register__container .register__form .title {
       font-size: 28px;
       margin-bottom: 0; }
+      @media (max-width: 575px) {
+        .register__container .register__form .title {
+          font-size: 14px; } }
     .register__container .register__form .sub--title {
       font-size: 48px;
       font-weight: 600; }
+      @media (max-width: 575px) {
+        .register__container .register__form .sub--title {
+          font-size: 24px; } }
     .register__container .register__form .content {
       width: 100%; }
       .register__container .register__form .content input {
@@ -116,19 +177,33 @@
         font-weight: 600;
         font-size: 24px;
         margin-bottom: 32px; }
+        @media (max-width: 575px) {
+          .register__container .register__form .content .text {
+            font-size: 16px;
+            margin-bottom: 24px; } }
       .register__container .register__form .content button {
         background-color: #faa634;
         font-weight: 600;
         font-size: 24px;
         padding: 26px 66px;
         border-radius: 8px !important; }
+        @media (max-width: 575px) {
+          .register__container .register__form .content button {
+            padding: 17px 27px;
+            font-size: 16px; } }
       .register__container .register__form .content--bottom {
         text-align: center; }
       .register__container .register__form .content .countdown__container {
         margin-top: 75px; }
+        @media (max-width: 575px) {
+          .register__container .register__form .content .countdown__container {
+            margin-top: 36px; } }
         .register__container .register__form .content .countdown__container .title {
           margin-bottom: 30px;
           color: #ffffff; }
+          @media (max-width: 575px) {
+            .register__container .register__form .content .countdown__container .title {
+              font-size: 24px; } }
 
 .question__conatiner {
   background-color: #c3daff;
@@ -338,15 +413,74 @@
 
 .more__info {
   background-color: #fbfbfb; }
+  .more__info img {
+    width: 100%;
+    object-fit: cover; }
 
 .frequently-questions {
   background-color: #EAF2FF; }
+  .frequently-questions .btn-register {
+    font-weight: 600;
+    color: #FFFFFF !important;
+    font-size: 24px;
+    padding: 15px 30px;
+    background: #3267D9 !important;
+    border-radius: 10px;
+    margin-top: 40px; }
 
 .accordion .accordion-item .accordion-header .accordion-button {
   background: #ffffff;
-  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.07) !important;
-  border-radius: 10px !important; }
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.07) !important; }
 
 .accordion .accordion-item .accordion-collapse {
   padding: 1rem 1.25rem;
   background: #FFFFFF !important; }
+
+.color--green {
+  color: #12b89e !important; }
+
+.companies {
+  text-align: center; }
+
+.footer {
+  padding: 68px 80px;
+  gap: 20px;
+  background-color: #3267D9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .footer .item {
+    color: #FFFFFF;
+    font-size: 16px; }
+    .footer .item .name {
+      margin-bottom: 3px;
+      font-weight: 600; }
+    .footer .item img {
+      margin-bottom: 10px; }
+
+.modal-dialog .modal-header {
+  padding-top: 20px;
+  padding-bottom: 60px !important;
+  position: relative; }
+  .modal-dialog .modal-header .modal-title {
+    padding-top: 44px;
+    position: absolute;
+    font-size: 32px;
+    font-weight: 600;
+    width: 100%;
+    text-align: center; }
+
+.modal-dialog .modal-content {
+  border-radius: 30px; }
+
+.modal-dialog label {
+  font-size: 16px;
+  margin-bottom: 2px !important;
+  color: #101F40; }
+
+.modal-dialog .btn-register {
+  font-size: 24px;
+  font-weight: 500;
+  padding: 10px 70px;
+  margin-top: 20px;
+  border-radius: 8px; }
