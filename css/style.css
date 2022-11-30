@@ -1,12 +1,12 @@
 /*This file is for your custom css.  All yours*/
-/**
-    * Usage
-    * @include media-breakpoint-below(sm) or @media-breakpoint-below(768px)
-*/
-/**
-    * Usage
-    * @include media-breakpoint-between(sm, lg) or @media-breakpoint-between(768px, 1200px)
-*/
+@font-face {
+  font-family: "Lexend";
+  src: url("../fonts/Lexend/Lexend-VariableFont_wght.ttf");
+  font-weight: normal; }
+
+body {
+  font-family: "Lexend"; }
+
 .container-fluid {
   padding-left: 0 !important;
   padding-right: 0 !important; }
@@ -635,16 +635,15 @@
       margin-bottom: 10px; }
 
 .modal-dialog .modal-header {
-  padding-top: 20px;
-  padding-bottom: 60px !important;
-  position: relative; }
+  padding-top: 20px; }
   .modal-dialog .modal-header .modal-title {
-    padding-top: 44px;
-    position: absolute;
     font-size: 32px;
     font-weight: 600;
     width: 100%;
     text-align: center; }
+    @media (max-width: 575px) {
+      .modal-dialog .modal-header .modal-title {
+        font-size: 24px !important; } }
 
 .modal-dialog .modal-content {
   border-radius: 30px; }

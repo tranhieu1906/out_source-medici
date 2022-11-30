@@ -13,25 +13,14 @@ $breakpoints: (
   lg: 1200px,
   xl: 1536px,
 );
-
-@mixin xxl {
-  @media (min-width: 1600px) {
-    @content;
-  }
+@font-face {
+  font-family: "Lexend";
+  src: url("../fonts/Lexend/Lexend-VariableFont_wght.ttf");
+  font-weight: normal;
 }
-
-@mixin pc {
-  @media (min-width: 1025px) {
-    @content;
-  }
+body {
+  font-family: "Lexend";
 }
-
-@mixin laptop {
-  @media (max-width: 1024px) {
-    @content;
-  }
-}
-
 @mixin tablet {
   @media (max-width: 768px) {
     @content;
@@ -57,11 +46,6 @@ $breakpoints: (
   }
 }
 
-/**
-    * Usage
-    * @include media-breakpoint-below(sm) or @media-breakpoint-below(768px)
-*/
-
 @mixin media-breakpoint-below($breakpoint) {
   @if map-has-key($breakpoints, $breakpoint) {
     $breakpoint-value: map-get($breakpoints, $breakpoint);
@@ -72,32 +56,6 @@ $breakpoints: (
     @media only screen and (max-width: $breakpoint) {
       @content;
     }
-  }
-}
-
-/**
-    * Usage
-    * @include media-breakpoint-between(sm, lg) or @media-breakpoint-between(768px, 1200px)
-*/
-
-@mixin media-breakpoint-between($lower, $upper) {
-  @if map-has-key($breakpoints, $lower) and map-has-key($breakpoints, $upper) {
-    $lower-breakpoint: map-get($breakpoints, $lower);
-    $upper-breakpoint: map-get($breakpoints, $upper);
-
-    @media only screen and (min-width: $lower-breakpoint) and (max-width: ($upper-breakpoint - 1)) {
-      @content;
-    }
-  } @else {
-    @media only screen and (min-width: $lower) and (max-width: ($upper - 1)) {
-      @content;
-    }
-  }
-}
-
-@mixin up-to-size($key, $breakpoint: $breakpoints) {
-  @media (max-width: map-get($breakpoint, $key)) {
-    @content;
   }
 }
 
@@ -851,15 +809,16 @@ $breakpoints: (
 .modal-dialog {
   .modal-header {
     padding-top: 20px;
-    padding-bottom: 60px !important;
-    position: relative;
+    // position: relative;
     .modal-title {
-      padding-top: 44px;
-      position: absolute;
+      // position: absolute;
       font-size: 32px;
       font-weight: 600;
       width: 100%;
       text-align: center;
+      @include mobile() {
+        font-size: 24px !important;
+      }
     }
   }
   .modal-content {
