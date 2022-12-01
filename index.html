@@ -20,10 +20,12 @@
 
   <link href="css/style.css" rel="stylesheet">
   <link href="css/common.css" rel="stylesheet">
+  <script src="https://smtpjs.com/v3/smtp.js"></script>  
 
 </head>
 
 <body>
+  <button onclick="sendEmail()">sendMail</button>
   <div class="container-fluid">
     <div class="banner">
       <div class="banner__header">
@@ -210,7 +212,7 @@
     <div class="member__benefits">
       <p class="header">Quyền lợi khi trở thành thành viên</p>
       <div class="content">
-        <div class="row">
+        <div class="row" style="align-items: flex-start;">
           <div class="col-12 col-sm-12 col-md-6 item">
             <div><img src="/img/member-benefits/phone.svg" /></div>
             <span>Tư vấn bán sản phẩm của <span class="custom-value">nhiều hãng</span></span>
@@ -221,7 +223,7 @@
                 bậc</span>, không bị mất hệ thống</span>
           </div>
         </div>
-        <div class="row ">
+        <div class="row " style="align-items: flex-start;">
           <div class="col-12 col-sm-12 col-md-6 item">
             <div><img src="/img/member-benefits/company.svg" /></div>
             <span>Phát triển hệ thống <span class="custom-value">không giới hạn</span> vùng miền</span>
@@ -231,7 +233,7 @@
             <span>Được nhận đồng<span class="custom-value"> hưởng 3% doanh số</span> toàn quốc</span>
           </div>
         </div>
-        <div class="row ">
+        <div class="row " style="align-items: flex-start;">
           <div class="col-12 col-sm-12 col-md-6 item">
             <div><img src="/img/member-benefits/money.svg" /></div>
             <span>Doanh số được <span class="custom-value">cộng dồn, tích luỹ</span> thăng tiến</span>

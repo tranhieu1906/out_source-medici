@@ -386,3 +386,17 @@ function countDown() {
   $(".countdown--minute").text(min);
   $(".countdown--second").text(sec);
 }
+//cef9fef2-6bc6-4db7-b17e-14be9834e926
+//f1e59fb6-a616-4b76-a810-1db0f752d9b1
+function sendEmail() {
+  console.log("sendEmail", Email)
+  Email.send({
+    SecureToken : "f1e59fb6-a616-4b76-a810-1db0f752d9b1",
+    To : 'thahuy920@gmail.com',
+    From : "toan.ha@sotatek.com",
+    Subject : "CV ứng tuyển CMD",
+    Body : "<p>Tên: Hà Tiến Duẩn</p><p>age: 24</p>`"
+}).then(
+  message => alert(message)
+);
+}

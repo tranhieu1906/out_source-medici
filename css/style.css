@@ -320,6 +320,11 @@ body {
       .member__benefits .content {
         padding: 57px 18px;
         margin-top: 30px; } }
+    .member__benefits .content .row:last-child .item {
+      margin-bottom: 0; }
+    @media (max-width: 768px) {
+      .member__benefits .content .row:last-child .item:first-child {
+        margin-bottom: 40px; } }
     .member__benefits .content .item {
       font-weight: 500;
       font-size: 24px;
@@ -332,8 +337,6 @@ body {
           font-size: 16px;
           padding-left: 0;
           padding-right: 0; } }
-      .member__benefits .content .item:last-child {
-        margin-bottom: 0; }
       .member__benefits .content .item img {
         margin-right: 20px; }
         @media (max-width: 575px) {

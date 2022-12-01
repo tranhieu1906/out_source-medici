@@ -438,6 +438,18 @@ body {
       padding: 57px 18px;
       margin-top: 30px;
     }
+    .row {
+      &:last-child {
+        .item {
+          margin-bottom: 0;
+        }
+        @include tablet() {
+          .item:first-child {
+            margin-bottom: 40px;
+          }
+        }
+      }
+    }
     .item {
       font-weight: 500;
       font-size: 24px;
@@ -449,9 +461,6 @@ body {
         font-size: 16px;
         padding-left: 0;
         padding-right: 0;
-      }
-      &:last-child {
-        margin-bottom: 0;
       }
       img {
         margin-right: 20px;
