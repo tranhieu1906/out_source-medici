@@ -721,6 +721,8 @@ body {
   }
   .video {
     border-radius: 20px;
+    height: 100%;
+    object-fit: cover;
   }
 }
 .frequently-questions {
@@ -753,8 +755,9 @@ body {
 }
 .accordion {
   .accordion-item {
-    border-top-right-radius: 10px !important;
-    border-top-left-radius: 10px !important;
+    // border-top-right-radius: 10px !important;
+    // border-top-left-radius: 10px !important;
+    position: relative;
     box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.07);
     .accordion-header {
       .accordion-button {
@@ -763,6 +766,11 @@ body {
         font-weight: 500 !important;
         font-size: 16px !important;
         box-shadow: none;
+        border-top-right-radius: 10px !important;
+        border-top-left-radius: 10px !important;
+        &[aria-expanded="false"] {
+          border-radius: 10px !important;
+        }
       }
       .accordion-button:not(.collapsed) {
         color: #101f40 !important;
@@ -774,6 +782,21 @@ body {
     }
     .accordion-collapse {
       background: #ffffff !important;
+      border-bottom-right-radius: 10px !important;
+      border-bottom-left-radius: 10px !important;
+    }
+    .show::before {
+      content: "";
+      width: 5px;
+      height: 80%;
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      position: absolute;
+      background: #12B89E;
+      z-index: 100;
+      box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.05);
     }
     .accordion-body {
       font-size: 14px !important;
@@ -810,6 +833,7 @@ body {
     }
     img {
       margin-bottom: 10px;
+      cursor: pointer;
     }
   }
 }
@@ -863,6 +887,7 @@ body {
       width: 64px;
       height: 64px;
       border-radius: 50%;
+      object-fit: cover;
     }
     .info {
       margin-left: 20px;
