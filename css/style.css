@@ -181,6 +181,7 @@ body {
         .register__container .register__form .title {
           font-size: 14px; } }
     .register__container .register__form .sub--title {
+      text-align: center;
       font-size: 48px;
       font-weight: 600; }
       @media (max-width: 575px) {
@@ -422,6 +423,7 @@ body {
       padding: 70px 20px; } }
   @media (max-width: 768px) {
     .our-team {
+      background-image: url("/../img/our-team-background-mobile.png");
       background-position: center;
       background-size: contain; } }
   .our-team .title {

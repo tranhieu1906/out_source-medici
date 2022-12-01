@@ -276,6 +276,7 @@ body {
       }
     }
     .sub--title {
+      text-align: center;
       font-size: 48px;
       font-weight: 600;
       @include mobile {
@@ -555,6 +556,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   @include tablet() {
+    background-image: url("/../img/our-team-background-mobile.png");
     background-position: center;
     background-size: contain;
   }

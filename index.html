@@ -25,7 +25,6 @@
 </head>
 
 <body>
-  <!-- <button onclick="sendEmail()">sendMail</button> -->
   <div class="container-fluid">
     <div class="banner">
       <div class="banner__header">
@@ -108,13 +107,17 @@
         </div>
       </div>
       <div class="col-xl-6 col-sm-12 col-12">
+        <form class="needs-validation" novalidate>
         <div class="register__form">
           <p class="title">Đăng Ký Miễn Phí</p>
-          <p class="sub--title">Bí mật đầu tư</p>
+          <p class="sub--title">Bí mật tiêu dùng thông minh</p>
           <div class="content">
             <div class="mb-3">
-              <label for="exampleFormControlInput1" class="form-label">Họ và tên</label>
-              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Nhập họ và tên">
+              <label for="validateName" class="form-label">Họ và tên</label>
+              <input type="text" class="form-control" id="validateName" placeholder="Nhập họ và tên">
+              <div class="invalid-feedback">
+                Please provide a valid city.
+              </div>
             </div>
             <div class="mb-3">
               <label for="exampleFormControlInput1" class="form-label">Số điện thoại</label>
@@ -131,7 +134,7 @@
             </div>
             <div class="content--bottom">
               <p class="text">Mọi thông tin của bạn được bảo mật 100%</p>
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registerModal">Đăng
+              <button type="button" class="btn btn-primary"  type="submit">Đăng
                 ký miễn phí ngày hôm nay</button>
             </div>
             <div class="countdown__container">
@@ -157,6 +160,7 @@
             </div>
           </div>
         </div>
+        </form>
       </div>
     </div>
     <div class="question__conatiner">
@@ -201,7 +205,7 @@
               <p>
                 Với mong muốn lan tỏa những giá trị tốt để giúp ích cho xã hội,mỗi 1 người bạn mà khi bạn có thể giúp họ
                 kết nối với MEDICI để họ cũng được hưởng những điều tuyệt vời như bạn đang được hưởng tại Medici thì bạn
-                cũng có được 1 cơ chế tưởng thưởng hấp dẫn tại Medici
+                cũng có được 1 cơ chế tưởng thưởng hấp dẫn tại Medici.
               </p>
 
             </div>
@@ -291,7 +295,7 @@
               <img class="avatar" src="/img/our-team/avatar2.png" />
               <p class="name">Bella Nguyễn (COO)</p>
               <p class="info--details">-Có nhiều năm kinh nghiệm công tác tại các công ty lớn trong nước và tại
-                Singapore. 
+                Singapore.
 
               </p>
               <p class="info--details">-Nguyên nhân sự cấp cao của Vingroup với nhiều năm làm trưởng bộ phận Marketing
@@ -306,13 +310,12 @@
           <div class=" col-sm-12 col-12 col-lg-6" style="display: inline-flex">
             <div class="box">
               <img class="avatar" src="/img/our-team/avatar3.png" />
-              <p class="name">Ngô Đức Anh (CEO)</p>
-              <p class="info--details">-Nguyên Phó Tổng Giám Đốc Kinh doanh Miền Bắc Công ty Hanwha Life.
-
-              </p>
+              <p class="name">Vũ Bá Tuyên (Deputy CEO)</p>
+              <p class="info--details">-Nguyên Phó Tổng Giám Đốc Kinh doanh Miền Bắc Công ty Hanwha Life.</p>
               <p class="info--details">-Nguyên Giám đốc miền Bắc - Công ty Dai-ichi Life. </p>
-              <p class="info--details">-Nguyên Sáng lập - CTHDQT FAD Insurance, đối tác chiến lược của FWD
+              <p class="info--details">-Nguyên Sáng lập - CTHDQT FAD Insurance, đối tác chiến lược của FWD.
               </p>
+              <p class="info--details">-Hơn 20 năm kinh nghiệm trong lĩnh vực bảo hiểm.</p>
               <p class="info--details">-Tốt nghiệp MBA tại AIT, Bangkok và bằng FLMI của LOMA, Canada (2008).
               </p>
             </div>
@@ -329,7 +332,7 @@
               </p>
               <p class="info--details">-Có nhiều năm kinh nghiệm sale, xây dựng hệ thống và Huấn luyện, đào tạo trong
                 bảo
-                hiểm tại Manulife, MB và Medici
+                hiểm tại Manulife, MB và Medici.
               </p>
             </div>
           </div>
@@ -356,22 +359,16 @@
             <div class="box__round box__round--orange">
               2
             </div>
-            <p class="name">Đối tượng 1</p>
-            <p class="value">Bạn là người đang muốn tham gia 1 trong những loại bảo hiểm ô tô, xe máy, nhà xưởng, cháy
-              nổ, sức khỏe,
-              du lịch, nhân thọ... Với giá ưu đãi lớn chưa từng có mà chất lượng vẫn đúng như bạn bỏ ra 100% khi tham
-              gia ngoài thị trường .
+            <p class="name">Đối tượng 2</p>
+            <p class="value">Bạn là chủ doanh nghiệp và đang muốn giữ chân nhân tài cũng như giảm được chi phí doanh nghiệp thông qua việc tham gia bảo hiểm cho nhân viên tại Medici, từ đó có thể tiết kiệm được hàng tỉ đồng mỗi năm.
             </p>
           </div>
           <div class="item">
             <div class="box__round box__round--green">
               3
             </div>
-            <p class="name">Đối tượng 1</p>
-            <p class="value">Bạn là người đang muốn tham gia 1 trong những loại bảo hiểm ô tô, xe máy, nhà xưởng, cháy
-              nổ, sức khỏe,
-              du lịch, nhân thọ... Với giá ưu đãi lớn chưa từng có mà chất lượng vẫn đúng như bạn bỏ ra 100% khi tham
-              gia ngoài thị trường .
+            <p class="name">Đối tượng 3</p>
+            <p class="value">Bạn muốn tạo ra thêm 1 nguồn thu nhập lớn hơn trong tương lai từ việc đem lại giá trị cho cộng đồng. Lan tỏa càng lớn, thu nhập càng khủng.
             </p>
           </div>
         </div>
@@ -484,7 +481,7 @@
       <div class="item">
         <img src="/img/footer/address.svg" />
         <p class="name">Địa chỉ công ty:</p>
-        <p class="value"> 36 Hoàng Cầu, Ô Chợ Dừa, Đống Đa, Hà Nội</p>
+        <p class="value"> Tầng 7 tòa nhà Peakview, 36 Hoàng Cầu, Ô Chợ Dừa, Đống Đa, Hà Nội</p>
       </div>
       <div class="item">
         <a href="https://www.facebook.com/profile.php?id=100005514665298" target="_blank">
@@ -538,7 +535,7 @@
    <!-- Noti -->
    <div id="myToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
     <div class="toast-body">
-      <img id="notiAvatar" src="" alt=""/>
+      <img id="notiAvatar" src="/img/logoAvatar.jpg" alt=""/>
       <div class="d-flex justify-content-between" style="width: 100%;">
         <div class="info">
           <p id="notiName" class="name">Vũ Minh Sơn</p>
