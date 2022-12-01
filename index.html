@@ -26,20 +26,6 @@
 <body>
   <div class="container-fluid">
     <div class="banner">
-      <!-- Noti -->
-      <div id="myToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-        <div class="toast-body">
-          <img id="notiAvatar" src="" alt=""/>
-          <div class="d-flex justify-content-between" style="width: 100%;">
-            <div class="info">
-              <p id="notiName" class="name">Vũ Minh Sơn</p>
-              <p class="noti--text">Vừa đăng ký thành công</p>
-              <p class="time">1 phút trước</p>
-            </div>
-            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-          </div>
-        </div>
-      </div>
       <div class="banner__header">
         <img src="/img/logo.svg" class="logo" />
         <div class="countdown__container">
@@ -81,8 +67,8 @@
           ngay</button>
       </div>
     </div>
-    <div class="register__container row gy-5">
-      <div class="col-xl-6 col-sm-12 col-12">
+    <div class="register__container row">
+      <div class="col-xl-6 col-sm-12 col-12 mb-5 mb-xl-0">
         <div class="post__container">
           <img class="post--logo" src="/img/post-logo.jpg" />
           <div class="post--item">
@@ -198,24 +184,25 @@
               <img src="/img/answer-icon.svg" />
               <span>Thứ 2 : Thêm nguồn thu nhập khác</span>
             </p>
-            <p class="answer--content">
-            <p>
-              Ngoài mong muốn được sở hữu những sản phẩm tốt, chất lượng với giá ưu đãi thì nhu cầu tạo ra thêm các
-              nguồn thu nhập khác để gia tăng tài sản của bản thân luôn tồn tại trong mỗi con người.  
-            </p>
-            <p>
-              Hiểu được mong muốn trên thì khi đến với Medici, bên cạnh việc bạn có thể được trải nghiệm trong 1 mô hình
-              siêu thị bảo hiểm công nghệ đầu tiên được Bộ Tài chính chọn là người mở hàng trong việc bảo vệ người dân
-              Việt, với sự kết hợp của rất nhiều những công ty bảo hiểm nhân thọ đến phi nhân thọ, từ đó giúp bạn có lựa
-              chọn và trải nghiệm tốt nhất với bảo hiểm nhưng lại được hưởng lợi với giá thành ưu đãi nhất trên thị
-              trường bảo hiểm.
-            </p>
+            <div class="answer--content">
+              <p class="paragraph">
+                Ngoài mong muốn được sở hữu những sản phẩm tốt, chất lượng với giá ưu đãi thì nhu cầu tạo ra thêm các
+                nguồn thu nhập khác để gia tăng tài sản của bản thân luôn tồn tại trong mỗi con người.
+              </p>
+              <p class="paragraph">
+                Hiểu được mong muốn trên thì khi đến với Medici, bên cạnh việc bạn có thể được trải nghiệm trong 1 mô hình
+                siêu thị bảo hiểm công nghệ đầu tiên được Bộ Tài chính chọn là người mở hàng trong việc bảo vệ người dân
+                Việt, với sự kết hợp của rất nhiều những công ty bảo hiểm nhân thọ đến phi nhân thọ, từ đó giúp bạn có lựa
+                chọn và trải nghiệm tốt nhất với bảo hiểm nhưng lại được hưởng lợi với giá thành ưu đãi nhất trên thị
+                trường bảo hiểm.
+              </p>
+              <p>
+                Với mong muốn lan tỏa những giá trị tốt để giúp ích cho xã hội,mỗi 1 người bạn mà khi bạn có thể giúp họ
+                kết nối với MEDICI để họ cũng được hưởng những điều tuyệt vời như bạn đang được hưởng tại Medici thì bạn
+                cũng có được 1 cơ chế tưởng thưởng hấp dẫn tại Medici
+              </p>
 
-            Với mong muốn lan tỏa những giá trị tốt để giúp ích cho xã hội,mỗi 1 người bạn mà khi bạn có thể giúp họ
-            kết nối với MEDICI để họ cũng được hưởng những điều tuyệt vời như bạn đang được hưởng tại Medici thì bạn
-            cũng có được 1 cơ chế tưởng thưởng hấp dẫn tại Medici
-
-            </p>
+            </div>
           </div>
         </div>
       </div>
@@ -426,67 +413,53 @@
           <img src="/img/frequently-questions/logo.png" class="img-fluid" />
         </div>
         <div class="col-12 col-md-6">
-          <div class="accordion mb-3" id="accordionExample">
+          <div class="accordion" id="accordionPanelsStayOpenExample">
             <div class="accordion-item">
-              <h2 class="accordion-header" id="headingOne">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                  aria-expanded="true" aria-controls="collapseOne">
+              <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
                   01. Tôi muốn đăng kí thì có dễ dàng không?
                 </button>
               </h2>
-              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-                data-bs-parent="#accordionExample">
+              <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
                 <div class="accordion-body">
                   Có. không những dễ mà còn là vô cùng dễ , chỉ với 1 vài thông tin cơ bản mất khoảng 1 phút là bạn có
                   thể hiện thực hóa tất cả những điều như trên.
                 </div>
               </div>
             </div>
-          </div>
-          <div class="accordion mb-3" id="accordion1">
             <div class="accordion-item">
-              <h2 class="accordion-header" id="headingThree">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree"
-                  aria-expanded="true" aria-controls="collapseThree">
+              <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
                   02. Tôi có được đào tạo nếu muốn hiểu hơn về sản phẩm và cơ chế tưởng thưởng của Medici?
                 </button>
               </h2>
-              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                data-bs-parent="#accordion1">
+              <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
                 <div class="accordion-body">
                   Có. bên cạnh việc giúp người tiêu dùng được hưởng giá ưu đãi vô cùng lớn thì việc giúp khách hàng hiểu hơn về sản phẩm trước khi tham gia cũng như để lan tỏa giá trị cho cộng đồng để xây dựng sự nghiệp lâu dài tại MEDICI, thì Medici luôn có những khóa học cả online và offline tất cả các ngày trong tuần để thuận tiện cho mọi thành viên. 
                 </div>
               </div>
             </div>
-          </div>
-          <div class="accordion mb-3" id="accordion2">
             <div class="accordion-item">
-              <h2 class="accordion-header" id="headingTwo">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
-                  aria-expanded="true" aria-controls="collapseTwo">
+              <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
                   03. Tôi có cần phải có kinh nghiệm không?
                 </button>
               </h2>
-              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                data-bs-parent="#accordion3">
+              <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
                 <div class="accordion-body">
                   Không. Với đội ngũ đồng hành cực kì đông đảo và có nhiều năm kinh nghiệm, luôn sẵn sàng hỗ trợ thì tất cả những gì cần có ở bạn là 1 tinh thần cởi mở và sẵn sàng đón nhận. 
                 </div>
               </div>
             </div>
-          </div>
-          <div class="accordion" id="accordion4">
             <div class="accordion-item">
-              <h2 class="accordion-header" id="headingFour">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour"
-                  aria-expanded="true" aria-controls="collapseFour">
+              <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
                   04. Tôi đã có kinh nghiệm làm bảo hiểm , liệu sự kiện này có mang lại lợi ích cho tôi không?
                 </button>
               </h2>
-              <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
-                data-bs-parent="#accordion4">
+              <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFour">
                 <div class="accordion-body">
-                  Không. Với đội ngũ đồng hành cực kì đông đảo và có nhiều năm kinh nghiệm, luôn sẵn sàng hỗ trợ thì tất cả những gì cần có ở bạn là 1 tinh thần cởi mở và sẵn sàng đón nhận. 
+                  Chắc chắn rồi. Bạn sẽ là người đi tiên phong trong việc đi trao giá trị cho cộng đồng và từ đó bạn sẽ có thể tạo ra 1 nguồn thu nhập với mức không tưởng.
                 </div>
               </div>
             </div>
@@ -557,6 +530,20 @@
             <button type="button" class="btn btn-primary btn-register">Đăng ký</button>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+   <!-- Noti -->
+   <div id="myToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-body">
+      <img id="notiAvatar" src="" alt=""/>
+      <div class="d-flex justify-content-between" style="width: 100%;">
+        <div class="info">
+          <p id="notiName" class="name">Vũ Minh Sơn</p>
+          <p class="noti--text">Vừa đăng ký thành công</p>
+          <p class="time">1 phút trước</p>
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
       </div>
     </div>
   </div>
