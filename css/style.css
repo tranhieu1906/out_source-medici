@@ -565,7 +565,10 @@ body {
     width: 100%;
     object-fit: cover; }
   .more__info .video {
-    border-radius: 20px; }
+    border-radius: 20px; 
+    height: 100%;
+    object-fit: cover;
+}
 
 .frequently-questions {
   background-color: #eaf2ff; }
