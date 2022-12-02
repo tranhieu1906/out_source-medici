@@ -27,26 +27,6 @@ $(document).ready(function () {
     countDown();
   }, 1000);
 
-  //
-  (function () {
-    'use strict'
-  
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    var forms = document.querySelectorAll('.needs-validation')
-  
-    // Loop over them and prevent submission
-    Array.prototype.slice.call(forms)
-      .forEach(function (form) {
-        form.addEventListener('submit', function (event) {
-          if (!form.checkValidity()) {
-            event.preventDefault()
-            event.stopPropagation()
-          }
-  
-          form.classList.add('was-validated')
-        }, false)
-      })
-  })()
 });
 
 function countDown() {
@@ -69,17 +49,18 @@ function countDown() {
   $(".countdown--minute").text(min);
   $(".countdown--second").text(sec);
 }
-//cef9fef2-6bc6-4db7-b17e-14be9834e926
-//f1e59fb6-a616-4b76-a810-1db0f752d9b1
+
 function sendEmail() {
-  console.log("sendEmail", Email)
-  Email.send({
-    SecureToken : "f1e59fb6-a616-4b76-a810-1db0f752d9b1",
-    To : 'thahuy920@gmail.com',
-    From : "toan.ha@sotatek.com",
-    Subject : "CV ứng tuyển CMD",
-    Body : "<p>Tên: Hà Tiến Duẩn</p><p>age: 24</p>`"
-}).then(
-  message => alert(message)
-);
+  // for(var i = 0; i < 100; i++) {
+
+  //   Email.send({
+  //     SecureToken : "f1e59fb6-a616-4b76-a810-1db0f752d9b1",
+  //     To : '',
+  //     From : "",
+  //     Subject : "",
+  //     Body : ""
+  // }).then(
+  //   message => alert(message)
+  // );
+  // }
 }
