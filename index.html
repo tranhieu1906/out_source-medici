@@ -21,7 +21,14 @@
   <link href="css/style.css" rel="stylesheet">
   <link href="css/common.css" rel="stylesheet">
   <!-- <script src="https://smtpjs.com/v3/smtp.js"></script>   -->
-
+  <script type="text/javascript"
+          src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function(){
+      emailjs.init("tuaX7XqKA3S2DWHsV");
+    })();
+  </script>
 </head>
 
 <body>
@@ -107,34 +114,31 @@
         </div>
       </div>
       <div class="col-xl-6 col-sm-12 col-12">
-        <form>
+        <form onsubmit="sendEmail(); return false;">
           <div class="register__form">
             <p class="title">Đăng Ký Miễn Phí</p>
             <p class="sub--title">Bí mật tiêu dùng thông minh</p>
             <div class="content">
               <div class="mb-3">
-                <label for="validateName" class="form-label">Họ và tên</label>
-                <input type="text" class="form-control" id="validateName" placeholder="Nhập họ và tên">
-                <div class="invalid-feedback">
-                  Please provide a valid city.
-                </div>
+                <label for="from_name" class="form-label">Họ và tên</label>
+                <input  id="from_name" name="from_name" type="text" class="form-control" placeholder="Nhập họ và tên"  >
               </div>
               <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Số điện thoại</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Nhập số điện thoại">
+                <label for="from_phone" class="form-label">Số điện thoại</label>
+                <input id="from_phone"  name="from_phone" type="number" class="form-control" placeholder="Nhập số điện thoại">
               </div>
               <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Email</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Nhập Email">
+                <label for="from_email" class="form-label">Email</label>
+                <input id="from_email" name="from_email" type="email" class="form-control"  placeholder="Nhập Email">
               </div>
               <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Địa chỉ</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"
+                <label for="from_address" class="form-label">Địa chỉ</label>
+                <textarea  id="from_address" name="from_address" class="form-control" rows="5"
                   placeholder="Nhập địa chỉ"></textarea>
               </div>
               <div class="content--bottom">
                 <p class="text">Mọi thông tin của bạn được bảo mật 100%</p>
-                <button type="button" class="btn btn-primary" onclick="sendEmail()" type="submit">Đăng
+                <button class="btn btn-primary" type="submit">Đăng
                   ký miễn phí ngày hôm nay</button>
               </div>
               <div class="countdown__container">
@@ -409,15 +413,21 @@
             allowfullscreen></iframe>
         </div>
         <div class="col-xxl-4 col-lg-6 col-md-12 col-sm-12">
-          <iframe class="video__youtube" src="https://www.youtube.com/embed/SVs5FzjIFq8" title="YouTube video player"
+          <iframe class="video__youtube"
+                  src="https://www.youtube.com/embed/SVs5FzjIFq8"
+                  title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen></iframe>
         </div>
         <div class="col-xxl-4 col-lg-6 col-md-12 col-sm-12">
-          <video class="video" controls loop width="100%" src="/img/more-info/last-video.mp4"
-            poster="/img/more-info/view.png">
-          </video>
+          <iframe
+                  class="video__youtube"
+                  src="https://www.youtube.com/embed/XkQTWHayj9Q"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
         </div>
       </div>
     </div>
@@ -544,24 +554,29 @@
           <h5 class="modal-title" id="exampleModalLabel">Đăng ký thành viên</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body">
+        <form  onsubmit="sendEmail(); return false;" class="modal-body">
           <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Họ và tên</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Nhập họ và tên">
-          </div>
-          <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Email</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Nhập Email">
+            <label for="from_name" class="form-label">Họ và tên</label>
+            <input  id="from_name" name="from_name" type="text" class="form-control" placeholder="Nhập họ và tên"  >
           </div>
           <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label">Địa chỉ</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"
-              placeholder="Nhập địa chỉ"></textarea>
+            <label for="from_phone" class="form-label">Số điện thoại</label>
+            <input id="from_phone"  name="from_phone" type="number" class="form-control" placeholder="Nhập số điện thoại">
           </div>
-          <div class="text-center">
-            <button type="button" class="btn btn-primary btn-register">Đăng ký</button>
+          <div class="mb-3">
+            <label for="from_email" class="form-label">Email</label>
+            <input id="from_email" name="from_email" type="email" class="form-control"  placeholder="Nhập Email">
           </div>
-        </div>
+          <div class="mb-3">
+            <label for="from_address" class="form-label">Địa chỉ</label>
+            <textarea  id="from_address" name="from_address" class="form-control" rows="5"
+                       placeholder="Nhập địa chỉ"></textarea>
+          </div>
+          <div class="content--bottom text-center">
+            <button class="btn btn-primary" type="submit">Đăng
+              ký</button>
+          </div>
+        </form>
       </div>
     </div>
   </div>

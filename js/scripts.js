@@ -50,17 +50,19 @@ function countDown() {
   $(".countdown--second").text(sec);
 }
 
-function sendEmail() {
-  // for(var i = 0; i < 100; i++) {
 
-  //   Email.send({
-  //     SecureToken : "f1e59fb6-a616-4b76-a810-1db0f752d9b1",
-  //     To : '',
-  //     From : "",
-  //     Subject : "",
-  //     Body : ""
-  // }).then(
-  //   message => alert(message)
-  // );
-  // }
+const serviceID = "service_sfo8jaj"
+const templateID = "template_4fhee8f"
+
+
+function sendEmail() {
+
+  emailjs.send("service_sfo8jaj","template_4fhee8f",{
+    from_name: document.getElementById("from_name")?.value,
+    from_email: document.getElementById("from_email")?.value,
+    from_phone: document.getElementById("from_phone")?.value,
+    from_address: document.getElementById("from_address")?.value,
+    to_name: "Nguyễn Văn Ngọc",
+  }).then(res => alert("Bạn đã gửi email thành công!")).catch(err => alert("Vui lòng thử lại sau!", err));
+
 }
