@@ -595,13 +595,18 @@ body {
   .frequently-questions .logo {
     text-align: center;
     margin-bottom: 24px; }
+
+.frequently-questions img {
+  height: 600px;
+}
     @media (max-width: 575px) {
       .frequently-questions .logo {
         display: flex;
         justify-content: center; }
         .frequently-questions .logo img {
           width: 223.64px;
-          height: 200px; } }
+          height: 200px;
+        } }
   .frequently-questions .btn-register {
     font-weight: 600;
     color: #ffffff !important;
