@@ -51,18 +51,24 @@ function countDown() {
 }
 
 
-const serviceID = "service_sfo8jaj"
-const templateID = "template_4fhee8f"
+// // nguyenvanngocmedici
+// const toName = "Nguyễn Văn Ngọc"
+// const serviceID = "service_sfo8jaj"
+// const templateID = "template_4fhee8f"
 
+
+// nguyenvanngocmedici
+const toName = "Nguyễn Thị Bằng"
+const serviceID = "service_dxblvdv"
+const templateID = "template_do3tbyw"
 
 function sendEmail() {
 
-  emailjs.send("service_sfo8jaj","template_4fhee8f",{
+  emailjs.send(serviceID, templateID, {
     from_name: document.getElementById("from_name")?.value,
     from_email: document.getElementById("from_email")?.value,
     from_phone: document.getElementById("from_phone")?.value,
     from_address: document.getElementById("from_address")?.value,
-    to_name: "Nguyễn Văn Ngọc",
+    to_name: toName,
   }).then(res => alert("Bạn đã gửi email thành công!")).catch(err => alert("Vui lòng thử lại sau!", err));
-
 }

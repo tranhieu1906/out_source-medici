@@ -575,10 +575,13 @@ body {
     font-weight: 600;
     font-size: 48px;
     text-align: center;
-    margin-bottom: 50px; }
+    margin-bottom: 50px;
+  }
     @media (max-width: 575px) {
       .general-box .title {
-        font-size: 24px; } }
+        font-size: 24px;
+        margin-bottom: 1rem;
+      } }
 
 .more__info {
   background-color: #fbfbfb; }
@@ -592,6 +595,9 @@ body {
 
 .frequently-questions {
   background-color: #eaf2ff; }
+  .title {
+    margin-bottom: 1rem;
+  }
   .frequently-questions .logo {
     text-align: center;
     margin-bottom: 24px; }
@@ -604,8 +610,8 @@ body {
         display: flex;
         justify-content: center; }
         .frequently-questions .logo img {
-          width: 223.64px;
-          height: 200px;
+          height: 400px;
+          /*width: 100%;*/
         } }
   .frequently-questions .btn-register {
     font-weight: 600;
