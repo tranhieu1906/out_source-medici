@@ -8,7 +8,7 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
 
-    <title>Medici-medici</title>
+    <title>Medici</title>
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
 
     <script src="js/jquery-2.2.4.js" type="text/javascript"></script>
@@ -36,18 +36,20 @@
         // emailjs.init("tuaX7XqKA3S2DWHsV");
 
         // nguyenthibangmedici
-        // emailjs.init("YdMmBP3dyt4-GQH9y");
+        emailjs.init("YdMmBP3dyt4-GQH9y");
 
         // nguyenthituyetmedici
         // emailjs.init("ZNNUffVtVQ-MWUU4H");
 
         // nguyenthihanggiang
-        emailjs.init("YKdj_XQDeSn6RV6TN");
+        // emailjs.init("YKdj_XQDeSn6RV6TN");
       })();
     </script>
   </head>
 
   <body>
+    <button id="myBtn">Open Modal</button>
+
     <div class="container-fluid">
       <div class="banner">
         <div class="banner__header">
@@ -476,10 +478,10 @@
                 <!--              <img class="avatar" src="/img/our-team/avatar5.png" /> // nguyenthibang-->
 
                 <!--              <img class="avatar" src="/img/our-team/avatar6.png" /> // nguyenthituyet-->
-                <img class="avatar" src="/img/our-team/avatar7.png" />
+                <img class="avatar" src="/img/our-team/avatar5.png" />
                 <p class="name">
-                  Nguyễn Thị Hằng Giang<br />
-                  (Giám đốc vùng)
+                  Nguyễn Thị Bằng<br />
+                  (Giám đốc kinh doanh)
                 </p>
                 <p class="info--details">
                   -Với nhiều năm kinh nghiệm trong nghành Bảo hiểm.
@@ -753,17 +755,17 @@
             <img src="/img/footer/facebook.svg" />
           </a>
           <p class="name">Facebook cá nhân:</p>
-          <p class="value">_</p>
+          <p class="value">Bằng Nguyễn</p>
         </div>
         <div class="item">
           <img src="/img/footer/sms.svg" />
           <p class="name">Gmail:</p>
-          <p class="value">giangnth71@gmail.com</p>
+          <p class="value">vietbach171220@gmail.com</p>
         </div>
         <div class="item">
           <img src="/img/footer/hotline.svg" />
           <p class="name">Hotline:</p>
-          <p class="value">0867718698</p>
+          <p class="value">0382975673</p>
         </div>
       </div>
     </div>
@@ -862,5 +864,76 @@
         </div>
       </div>
     </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-body">
+          <img alt="" src="/img/checked.png" />
+          <h3>Chúc mừng bạn đã đăng ký thành công</h3>
+          <h5>Chúng tôi sẽ liên hệ với bạn trong thời gian sớm nhất!</h5>
+        </div>
+        <div class="modal-footer">
+          <button id="btn-close" type="button" class="btn btn-primary btn-ok">
+            OK
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var modal = document.getElementById("myModal");
+      var close = document.getElementById("btn-close");
+
+      close.onclick = function () {
+        modal.style.display = "none";
+      };
+
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+
+      // nguyenvanngocmedici - noreply.devnguyen@gmail.com
+      // const toName = "Nguyễn Văn Ngọc"
+      // const serviceID = "service_sfo8jaj"
+      // const templateID = "template_4fhee8f"
+
+      // nguyenthibangmedici - noreply1.devnguyen@gmail.com - vietbach171220@gmail.com
+      const toName = "Nguyễn Thị Bằng";
+      const serviceID = "service_exf97c4";
+      const templateID = "template_h0jqdtf";
+
+      // nguyenthituyetmedici - noreply2.devnguyen@gmail.com
+      // const toName = "Nguyễn Thị Tuyết"
+      // const serviceID = "service_an9zxon"
+      // const templateID = "template_k39z25m"
+
+      // nguyenthihanggiang - noreply.devnguyen3@gmail.com
+      // const toName = "Nguyễn Thị Hằng Giang"
+      // const serviceID = "service_lvcz114"
+      // const templateID = "template_w8aawm8"
+
+      function sendEmail() {
+        emailjs
+          .send(serviceID, templateID, {
+            from_name: document.getElementById("from_name")?.value,
+            from_email: document.getElementById("from_email")?.value,
+            from_phone: document.getElementById("from_phone")?.value,
+            from_address: document.getElementById("from_address")?.value,
+            to_name: toName,
+          })
+          .then((res) => {
+            // alert("Bạn đã gửi email thành công!");
+            modal.style.display = "block";
+          })
+          .catch((err) => {
+            alert("Vui lòng thử lại sau!", err);
+            console.log(err);
+          });
+      }
+    </script>
   </body>
 </html>
