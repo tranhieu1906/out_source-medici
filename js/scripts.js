@@ -51,16 +51,27 @@ function countDown() {
 }
 
 
-// // nguyenvanngocmedici
+// nguyenvanngocmedici - noreply.devnguyen@gmail.com
 // const toName = "Nguyễn Văn Ngọc"
 // const serviceID = "service_sfo8jaj"
 // const templateID = "template_4fhee8f"
 
 
-// nguyenvanngocmedici
-const toName = "Nguyễn Thị Bằng"
-const serviceID = "service_dxblvdv"
-const templateID = "template_do3tbyw"
+// nguyenthibangmedici - noreply1.devnguyen@gmail.com
+// const toName = "Nguyễn Thị Bằng"
+// const serviceID = "service_exf97c4"
+// const templateID = "template_do3tbyw"
+
+
+// nguyenthituyetmedici - noreply2.devnguyen@gmail.com
+// const toName = "Nguyễn Thị Tuyết"
+// const serviceID = "service_an9zxon"
+// const templateID = "template_k39z25m"
+
+// nguyenthihanggiang - noreply.devnguyen3@gmail.com
+const toName = "Nguyễn Thị Hằng Giang"
+const serviceID = "service_lvcz114"
+const templateID = "template_w8aawm8"
 
 function sendEmail() {
 
@@ -70,5 +81,8 @@ function sendEmail() {
     from_phone: document.getElementById("from_phone")?.value,
     from_address: document.getElementById("from_address")?.value,
     to_name: toName,
-  }).then(res => alert("Bạn đã gửi email thành công!")).catch(err => alert("Vui lòng thử lại sau!", err));
+  }).then(res => alert("Bạn đã gửi email thành công!")).catch(err => {
+    alert("Vui lòng thử lại sau!", err)
+    console.log(err)
+  });
 }
