@@ -33,13 +33,13 @@
     <script type="text/javascript">
       (function () {
         // nguyenvanngocmedici
-        // emailjs.init("tuaX7XqKA3S2DWHsV");
+        emailjs.init("tuaX7XqKA3S2DWHsV");
 
         // nguyenthibangmedici
         // emailjs.init("YdMmBP3dyt4-GQH9y");
 
         // nguyenthituyetmedici
-        emailjs.init("ZNNUffVtVQ-MWUU4H");
+        // emailjs.init("ZNNUffVtVQ-MWUU4H");
 
         // nguyenthihanggiang
         // emailjs.init("YKdj_XQDeSn6RV6TN");
@@ -472,30 +472,25 @@
             </div>
             <div class="col-sm-12 col-12 col-lg-6" style="display: inline-flex">
               <div class="box">
-                <!--              <img class="avatar" src="/img/our-team/avatar4.png" /> // nguyenvanngoc-->
+                <!-- nguyenvanngoc -->
+                <img class="avatar" src="/img/our-team/avatar4.png" />
                 <!--              <img class="avatar" src="/img/our-team/avatar5.png" /> // nguyenthibang-->
 
                 <!--              <img class="avatar" src="/img/our-team/avatar6.png" /> // nguyenthituyet-->
                 <!--              <img class="avatar" src="/img/our-team/avatar7.png" /> // nguyenthihanggiang-->
                 <img class="avatar" src="/img/our-team/avatar6.png" />
                 <p class="name">
-                  Nguyễn Thị Tuyết<br />
-                  (Giám đốc vùng)
+                  Nguyễn Văn Ngọc<br />
+                  (Giám đốc vùng cấp cao)
                 </p>
                 <p class="info--details">
-                  -Phó giám Đốc Cty TNHH đầu tư dịch vụ và phát triển THỊNH PHÁT
+                  -Người sáng lập dự án TIÊU DÙNG THÔNG MINH và dự án TRUNG TÂM
+                  HỖ TRỢ BỒI THƯỜNG BẢO HIỂM cho tất cả các hãng bảo hiểm có mặt
+                  tại Việt Nam.
                 </p>
                 <p class="info--details">
-                  -Nguyên giám đốc công ty BHNT FWD Việt Nam
-                </p>
-                <p class="info--details">
-                  -Với nhiều năm kinh nghiệm trong nghành Bảo hiểm.
-                </p>
-                <p class="info--details">
-                  -Đạt nhiều danh hiệu danh giá trong nghành Bảo hiểm (MDRT,
-                  Người kiến tạo đội ngũ MDRT, Top 1 chăm sóc khách hàng, Đại sứ
-                  bảo vệ, Top 1 Giám đốc kinh doanh có doanh số cao nhất khu
-                  vực...).
+                  -Có nhiều năm kinh nghiệm sale, xây dựng hệ thống và Huấn
+                  luyện, đào tạo trong bảo hiểm tại Manulife, MB và Medici.
                 </p>
               </div>
             </div>
@@ -760,17 +755,17 @@
             <img src="/img/footer/facebook.svg" />
           </a>
           <p class="name">Facebook cá nhân:</p>
-          <p class="value">Nguyễn Tuyết</p>
+          <p class="value">Ngọc Bảo Hiểm</p>
         </div>
         <div class="item">
           <img src="/img/footer/sms.svg" />
           <p class="name">Gmail:</p>
-          <p class="value">nguyentuyetmedici@gmail.com</p>
+          <p class="value">nguyenvanngoc90fad@gmail.com</p>
         </div>
         <div class="item">
           <img src="/img/footer/hotline.svg" />
           <p class="name">Hotline:</p>
-          <p class="value">0961188698</p>
+          <p class="value">0968686642</p>
         </div>
       </div>
     </div>
@@ -798,40 +793,42 @@
           </div>
           <form onsubmit="sendEmail(); return false;" class="modal-body">
             <div class="mb-3">
-              <label for="from_name" class="form-label">Họ và tên</label>
+              <label for="from_name_modal" class="form-label">Họ và tên</label>
               <input
-                id="from_name"
-                name="from_name"
+                id="from_name_modal"
+                name="from_name_modal"
                 type="text"
                 class="form-control"
                 placeholder="Nhập họ và tên"
               />
             </div>
             <div class="mb-3">
-              <label for="from_phone" class="form-label">Số điện thoại</label>
+              <label for="from_phone_modal" class="form-label"
+                >Số điện thoại</label
+              >
               <input
-                id="from_phone"
-                name="from_phone"
+                id="from_phone_modal"
+                name="from_phone_modal"
                 type="number"
                 class="form-control"
                 placeholder="Nhập số điện thoại"
               />
             </div>
             <div class="mb-3">
-              <label for="from_email" class="form-label">Email</label>
+              <label for="from_email_modal" class="form-label">Email</label>
               <input
-                id="from_email"
-                name="from_email"
+                id="from_email_modal"
+                name="from_email_modal"
                 type="email"
                 class="form-control"
                 placeholder="Nhập Email"
               />
             </div>
             <div class="mb-3">
-              <label for="from_address" class="form-label">Địa chỉ</label>
+              <label for="from_address_modal" class="form-label">Địa chỉ</label>
               <textarea
-                id="from_address"
-                name="from_address"
+                id="from_address_modal"
+                name="from_address_modal"
                 class="form-control"
                 rows="5"
                 placeholder="Nhập địa chỉ"
@@ -902,9 +899,9 @@
       };
 
       // nguyenvanngocmedici - noreply.devnguyen@gmail.com
-      // const toName = "Nguyễn Văn Ngọc"
-      // const serviceID = "service_sfo8jaj"
-      // const templateID = "template_4fhee8f"
+      const toName = "Nguyễn Văn Ngọc";
+      const serviceID = "service_sfo8jaj";
+      const templateID = "template_4fhee8f";
 
       // nguyenthibangmedici - noreply1.devnguyen@gmail.com - vietbach171220@gmail.com
       // const toName = "Nguyễn Thị Bằng";
@@ -912,9 +909,9 @@
       // const templateID = "template_h0jqdtf";
 
       // nguyenthituyetmedici - noreply2.devnguyen@gmail.com
-      const toName = "Nguyễn Thị Tuyết";
-      const serviceID = "service_an9zxon";
-      const templateID = "template_k39z25m";
+      // const toName = "Nguyễn Thị Tuyết";
+      // const serviceID = "service_an9zxon";
+      // const templateID = "template_k39z25m";
 
       // nguyenthihanggiang - noreply.devnguyen3@gmail.com
       // const toName = "Nguyễn Thị Hằng Giang"
@@ -922,12 +919,21 @@
       // const templateID = "template_w8aawm8"
 
       function sendEmail() {
+        const flag = document.getElementById("from_name")?.value;
         emailjs
           .send(serviceID, templateID, {
-            from_name: document.getElementById("from_name")?.value,
-            from_email: document.getElementById("from_email")?.value,
-            from_phone: document.getElementById("from_phone")?.value,
-            from_address: document.getElementById("from_address")?.value,
+            from_name: document.getElementById(
+              flag ? "from_name" : "from_name_modal"
+            )?.value,
+            from_email: document.getElementById(
+              flag ? "from_email" : "from_email_modal"
+            )?.value,
+            from_phone: document.getElementById(
+              flag ? "from_phone" : "from_phone_modal"
+            )?.value,
+            from_address: document.getElementById(
+              flag ? "from_address" : "from_address_modal"
+            )?.value,
             to_name: toName,
           })
           .then((res) => {
