@@ -831,7 +831,13 @@
               ></textarea>
             </div>
             <div class="content--bottom text-center">
-              <button class="btn btn-primary" type="submit">Đăng ký</button>
+              <button
+                class="btn btn-primary"
+                type="submit"
+                data-bs-dismiss="modal"
+              >
+                Đăng ký
+              </button>
             </div>
           </form>
         </div>
@@ -915,12 +921,21 @@
       // const templateID = "template_w8aawm8"
 
       function sendEmail() {
+        const flag = document.getElementById("from_name")?.value;
         emailjs
           .send(serviceID, templateID, {
-            from_name: document.getElementById("from_name")?.value,
-            from_email: document.getElementById("from_email")?.value,
-            from_phone: document.getElementById("from_phone")?.value,
-            from_address: document.getElementById("from_address")?.value,
+            from_name: document.getElementById(
+              flag ? "from_name" : "from_name_modal"
+            )?.value,
+            from_email: document.getElementById(
+              flag ? "from_email" : "from_email_modal"
+            )?.value,
+            from_phone: document.getElementById(
+              flag ? "from_phone" : "from_phone_modal"
+            )?.value,
+            from_address: document.getElementById(
+              flag ? "from_address" : "from_address_modal"
+            )?.value,
             to_name: toName,
           })
           .then((res) => {
