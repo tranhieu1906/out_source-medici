@@ -144,7 +144,7 @@ $(document).ready(function () {
       clearTimeout(timer);
       timer = setTimeout(() => {
         $("#myToast").toast("hide");
-      }, 5000);
+      }, 7000);
     }, [randomTimer]);
   }, 10000);
 
