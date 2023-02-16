@@ -194,6 +194,18 @@
                     placeholder="Nhập địa chỉ"
                   ></textarea>
                 </div>
+                <div class="mb-3">
+                  <label for="from_content" class="form-label"
+                    >Nội dung mong muốn tư vấn</label
+                  >
+                  <textarea
+                    id="from_content"
+                    name="from_content"
+                    class="form-control"
+                    rows="5"
+                    placeholder="Nhập nội dung mong muốn tư vấn"
+                  ></textarea>
+                </div>
                 <div class="content--bottom">
                   <p class="text">Mọi thông tin của bạn được bảo mật 100%</p>
                   <button class="btn btn-primary" type="submit">
@@ -751,9 +763,7 @@
           </p>
         </div>
         <div class="item">
-          <a href="" target="_blank">
-            <img src="/img/footer/facebook.svg" />
-          </a>
+          <img src="/img/footer/facebook.svg" />
           <p class="name">Facebook cá nhân:</p>
           <a
             href="https://www.facebook.com/profile.php?id=100005514665298"
@@ -845,6 +855,18 @@
                 class="form-control"
                 rows="5"
                 placeholder="Nhập địa chỉ"
+              ></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="from_content_modal" class="form-label"
+                >Nội dung mong muốn tư vấn</label
+              >
+              <textarea
+                id="from_content_modal"
+                name="from_content_modal"
+                class="form-control"
+                rows="5"
+                placeholder="Nhập nội dung mong muốn tư vấn"
               ></textarea>
             </div>
             <div class="content--bottom text-center">
@@ -952,6 +974,9 @@
             )?.value,
             from_address: document.getElementById(
               flag ? "from_address" : "from_address_modal"
+            )?.value,
+            from_content: document.getElementById(
+              flag ? "from_content" : "from_content_modal"
             )?.value,
             to_name: toName,
           })
