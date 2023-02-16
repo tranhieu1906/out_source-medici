@@ -194,6 +194,18 @@
                     placeholder="Nhập địa chỉ"
                   ></textarea>
                 </div>
+                <div class="mb-3">
+                  <label for="from_content" class="form-label"
+                    >Nội dung mong muốn tư vấn</label
+                  >
+                  <textarea
+                    id="from_content"
+                    name="from_content"
+                    class="form-control"
+                    rows="5"
+                    placeholder="Nhập nội dung mong muốn tư vấn"
+                  ></textarea>
+                </div>
                 <div class="content--bottom">
                   <p class="text">Mọi thông tin của bạn được bảo mật 100%</p>
                   <button class="btn btn-primary" type="submit">
@@ -598,7 +610,7 @@
           <div class="col-xxl-4 col-lg-6 col-md-12 col-sm-12">
             <iframe
               class="video__youtube"
-              src="https://www.youtube.com/embed/XkQTWHayj9Q"
+              src="https://www.youtube.com/embed/p4CGAtm5KCw"
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -760,12 +772,17 @@
         <div class="item">
           <img src="/img/footer/sms.svg" />
           <p class="name">Gmail:</p>
-          <p class="value">giangnth71@gmail.com</p>
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=giangnth71@gmail.com"
+            target="_blank"
+            class="value"
+            >giangnth71@gmail.com</a
+          >
         </div>
         <div class="item">
           <img src="/img/footer/hotline.svg" />
           <p class="name">Hotline:</p>
-          <a href="tel:+84867718698">0867718698</a>
+          <a href="tel:+84867718698" class="value">0867718698</a>
         </div>
       </div>
     </div>
@@ -832,6 +849,18 @@
                 class="form-control"
                 rows="5"
                 placeholder="Nhập địa chỉ"
+              ></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="from_content_modal" class="form-label"
+                >Nội dung mong muốn tư vấn</label
+              >
+              <textarea
+                id="from_content_modal"
+                name="from_content_modal"
+                class="form-control"
+                rows="5"
+                placeholder="Nhập nội dung mong muốn tư vấn"
               ></textarea>
             </div>
             <div class="content--bottom text-center">
@@ -939,6 +968,9 @@
             )?.value,
             from_address: document.getElementById(
               flag ? "from_address" : "from_address_modal"
+            )?.value,
+            from_content: document.getElementById(
+              flag ? "from_content" : "from_content_modal"
             )?.value,
             to_name: toName,
           })
